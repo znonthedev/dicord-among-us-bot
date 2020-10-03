@@ -18,9 +18,7 @@ bot.on('message', (msg) => {
     } else if (command == '2') {
       msg.channel.send('Who is the impostor');
       mute(msg, false);
-    } else {
-      msg.channel.send('Command not configured');
-    }
+    } 
 });
 
 bot.on('guildMemberAdd', member => {
