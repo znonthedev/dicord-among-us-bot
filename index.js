@@ -18,8 +18,15 @@ bot.on('message', (msg) => {
     } else if (command == '2') {
       msg.channel.send('Who is the impostor');
       mute(msg, false);
+    } else {
+      msg.channel.send('Command not configured');
     }
 });
+
+bot.on('guildMemberAdd', member => {
+  member.guild.channels.get('channelID').send("Welcome, Join our voice lobby"); 
+});
+
 
 function mute(message, condition) {
   let channel = message.guild.channels.get('756929143861542929');
